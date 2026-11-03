@@ -1,0 +1,2 @@
+# Hotel_Management_Institute
+Automated website repository for Hotel_Management_Institute
