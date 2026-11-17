@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Suite -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <title>Student Portal | HMI Institute of Hotel Management</title>
+  <meta name="description" content="Official Student Portal - Track academic coursework, view exam results, monitor international residency offers, and manage tuition fees.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Master Styles & Dashboard Specific Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" aria-label="Student Portal Navigation">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-logo" title="Back to Public Homepage">
+          <div class="brand-crest" style="width:38px;height:38px;font-size:1.15rem;">H</div>
+          <div class="brand-text">
+            <span class="brand-name sidebar-text" style="font-size:0.95rem;">HMI Student</span>
+            <span class="brand-sub">Portal 2026</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-heading sidebar-text">Academic Management</div>
+        <a href="#" class="sidebar-nav-item active" data-tab="tab-overview">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-text">Overview</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-profile">
+          <i data-lucide="user"></i>
+          <span class="sidebar-text">Student Profile</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-coursework">
+          <i data-lucide="book-open"></i>
+          <span class="sidebar-text">Coursework & Modules</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-assignments">
+          <i data-lucide="clipboard-check"></i>
+          <span class="sidebar-text">Assignment Tracking</span>
+          <span class="badge bg-danger rounded-pill ms-auto sidebar-text badge-dot-pill" style="font-size:0.68rem;">1 Due</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-progress">
+          <i data-lucide="line-chart"></i>
+          <span class="sidebar-text">Learning Progress</span>
+        </a>
+
+        <div class="sidebar-heading sidebar-text">Career & Finance</div>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-internship">
+          <i data-lucide="briefcase"></i>
+          <span class="sidebar-text">Internship Tracking</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-fees">
+          <i data-lucide="credit-card"></i>
+          <span class="sidebar-text">Fee Status & Receipts</span>
+        </a>
+
+        <div class="sidebar-heading sidebar-text">Evaluation & Settings</div>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-exams">
+          <i data-lucide="calendar"></i>
+          <span class="sidebar-text">Exams & Results</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-notifications">
+          <i data-lucide="bell"></i>
+          <span class="sidebar-text">Notifications</span>
+          <span class="badge bg-warning text-dark rounded-pill ms-auto sidebar-text badge-dot-pill" style="font-size:0.68rem;">3</span>
+        </a>
+        <a href="#" class="sidebar-nav-item" data-tab="tab-settings">
+          <i data-lucide="settings"></i>
+          <span class="sidebar-text">Portal Settings</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-nav-item text-danger logout-trigger-btn p-0">
+          <i data-lucide="log-out"></i>
+          <span class="sidebar-text fw-bold">Sign Out Portal</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dashboard-main">
+      <!-- TOP NAVIGATION BAR -->
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button id="sidebarToggleBtn" class="icon-btn" aria-label="Toggle Navigation Sidebar">
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="topbar-search">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Search modules, assignments, dates...">
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          </button>
+          <a href="pay-fees.html" class="btn-luxury btn-luxury-primary d-none d-md-inline-flex py-2 px-3 small" style="font-size:0.8rem;">
+            <i data-lucide="wallet" style="width:14px;height:14px;"></i> Pay Fees
+          </a>
+
+          <!-- Student Profile Dropdown -->
+          <div class="dropdown">
+            <div class="student-pill" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="student-avatar student-display-avatar">AS</div>
+              <div class="d-none d-sm-block text-start" style="line-height:1.2;">
+                <div class="fw-bold small student-display-name">Alexander Sterling</div>
+                <div class="text-muted" style="font-size:0.72rem;"><span class="student-display-id">HMI2026</span></div>
+              </div>
+              <i data-lucide="chevron-down" style="width:14px;height:14px;" class="text-muted ms-1"></i>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow border mt-2">
+              <li class="px-3 py-2 border-bottom">
+                <div class="fw-bold small student-display-name">Alexander Sterling</div>
+                <div class="small text-muted student-display-course">B.Sc. International Hotel Management</div>
+              </li>
+              <li><a class="dropdown-item py-2 small" href="index.html"><i data-lucide="home" class="me-2" style="width:14px;height:14px;"></i> Public Home 1</a></li>
+              <li><a class="dropdown-item py-2 small" href="home-2.html"><i data-lucide="external-link" class="me-2" style="width:14px;height:14px;"></i> Public Home 2</a></li>
+              <li><a class="dropdown-item py-2 small" href="pay-fees.html"><i data-lucide="credit-card" class="me-2" style="width:14px;height:14px;"></i> Online Fee Desk</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 small text-danger logout-trigger-btn" href="#"><i data-lucide="log-out" class="me-2" style="width:14px;height:14px;"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD BODY CONTAINER -->
+      <div class="dashboard-body">
+
+        <!-- TAB 1: OVERVIEW -->
+        <section id="tab-overview" class="tab-pane-custom active">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-2">
+            <div>
+              <h2 class="font-serif mb-1">Welcome back, <span class="student-display-name text-champagne">Alexander</span></h2>
+              <p class="small text-muted mb-0"><span class="student-display-course">B.Sc. International Hotel Management</span> • Academic Session 2026/2027</p>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="badge badge-luxury badge-champagne fs-6">Academic Standing: First Class Honours</span>
+            </div>
+          </div>
+
+          <!-- Quick Stats Grid -->
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-card">
+                <div class="dash-stat-flex">
+                  <span class="text-muted small fw-semibold text-uppercase">Cumulative GPA</span>
+                  <div class="stat-icon-wrapper gold"><i data-lucide="award"></i></div>
+                </div>
+                <div class="fs-2 fw-bold font-serif mb-1 student-display-gpa">3.92</div>
+                <div class="small text-success d-flex align-items-center gap-1">
+                  <i data-lucide="trending-up" style="width:14px;height:14px;"></i> Top 3% of Cohort
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-card">
+                <div class="dash-stat-flex">
+                  <span class="text-muted small fw-semibold text-uppercase">Lab Attendance</span>
+                  <div class="stat-icon-wrapper emerald"><i data-lucide="user-check"></i></div>
+                </div>
+                <div class="fs-2 fw-bold font-serif mb-1 student-display-attendance">96%</div>
+                <div class="small text-muted">Exceeds 85% requirement</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-card">
+                <div class="dash-stat-flex">
+                  <span class="text-muted small fw-semibold text-uppercase">Outstanding Balance</span>
+                  <div class="stat-icon-wrapper burgundy"><i data-lucide="wallet"></i></div>
+                </div>
+                <div class="fs-2 fw-bold font-serif mb-1 text-danger student-display-fee-balance">$6,000</div>
+                <div class="small text-muted"><a href="pay-fees.html" class="text-champagne fw-semibold">Pay now online →</a></div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-card">
+                <div class="dash-stat-flex">
+                  <span class="text-muted small fw-semibold text-uppercase">Residency Offer</span>
+                  <div class="stat-icon-wrapper blue"><i data-lucide="building"></i></div>
+                </div>
+                <div class="fs-4 fw-bold font-serif mb-1">The Ritz-Carlton</div>
+                <div class="small text-success">Confirmed • Geneva Quarters</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Modules & Upcoming Notice Split -->
+          <div class="row g-4 mb-4">
+            <div class="col-lg-8">
+              <div class="dash-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="font-serif mb-0">Active Semester Modules</h5>
+                  <span class="badge bg-light text-dark border">Term IV</span>
+                </div>
+                <div class="table-responsive">
+                  <table class="table-luxury">
+                    <thead>
+                      <tr>
+                        <th>Module</th>
+                        <th>Instructor</th>
+                        <th>Progress</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="fw-bold">Hotel Asset Revenue & Yield</div>
+                          <span class="small text-muted font-monospace">HMI-HM301</span>
+                        </td>
+                        <td>Prof. M. Thornton</td>
+                        <td style="width: 180px;">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress-luxury flex-grow-1"><div class="progress-bar-luxury" style="width: 82%;"></div></div>
+                            <span class="small fw-semibold">82%</span>
+                          </div>
+                        </td>
+                        <td><a href="#" class="btn btn-sm btn-outline-secondary py-1 px-2 small">Syllabus</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-bold">Haute Cuisine Master Practical</div>
+                          <span class="small text-muted font-monospace">HMI-CUL204</span>
+                        </td>
+                        <td>Chef J. Vachon (MOF)</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress-luxury flex-grow-1"><div class="progress-bar-luxury" style="width: 90%;"></div></div>
+                            <span class="small fw-semibold">90%</span>
+                          </div>
+                        </td>
+                        <td><a href="#" class="btn btn-sm btn-outline-secondary py-1 px-2 small">Recipes</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-bold">Grand Cru Sommelier & Cellar Mgmt</div>
+                          <span class="small text-muted font-monospace">HMI-FOB212</span>
+                        </td>
+                        <td>M. Bernardi (CMS)</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress-luxury flex-grow-1"><div class="progress-bar-luxury" style="width: 74%;"></div></div>
+                            <span class="small fw-semibold">74%</span>
+                          </div>
+                        </td>
+                        <td><a href="#" class="btn btn-sm btn-outline-secondary py-1 px-2 small">Notes</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="dash-card">
+                <h5 class="font-serif mb-3">Academic Notices</h5>
+                <div class="d-flex flex-column gap-3">
+                  <div class="p-3 rounded bg-surface-elevated border">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <span class="badge bg-danger-subtle text-danger border">Urgent Deadline</span>
+                      <span class="small text-muted">Tomorrow</span>
+                    </div>
+                    <div class="fw-bold small">Upload Case Study: Luxury Brand Equity</div>
+                    <div class="small text-muted">Submission portal closes at 23:59 CET.</div>
+                  </div>
+
+                  <div class="p-3 rounded bg-surface-elevated border">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <span class="badge bg-primary-subtle text-primary border">Masterclass</span>
+                      <span class="small text-muted">Nov 22</span>
+                    </div>
+                    <div class="fw-bold small">Guest Lecture: General Manager, Aman Venice</div>
+                    <div class="small text-muted">Grand Amphitheatre Alpha & Virtual Stream.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: STUDENT PROFILE -->
+        <section id="tab-profile" class="tab-pane-custom">
+          <div class="dash-card max-w-800 mx-auto">
+            <div class="d-flex align-items-center gap-4 mb-4 pb-4 border-bottom">
+              <div class="student-avatar student-display-avatar" style="width:72px;height:72px;font-size:1.8rem;">AS</div>
+              <div>
+                <h3 class="font-serif mb-1 student-display-name">Alexander Sterling</h3>
+                <div class="small text-muted">Student ID: <span class="font-monospace fw-bold text-champagne student-display-id">HMI2026</span></div>
+                <div class="small text-muted">Enrolled Program: <strong class="student-display-course">B.Sc. International Hotel Management</strong></div>
+              </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); window.HMI.showToast('Profile information successfully saved.');">
+              <div class="row g-3">
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Full Legal Name</label>
+                  <input type="text" class="form-control-luxury" value="Alexander Sterling">
+                </div>
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Student Identification Number</label>
+                  <input type="text" class="form-control-luxury font-monospace" value="HMI2026" readonly>
+                </div>
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Institutional Email</label>
+                  <input type="email" class="form-control-luxury" value="alexander.s@student.hmi.edu" readonly>
+                </div>
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Contact Phone</label>
+                  <input type="tel" class="form-control-luxury" value="+1 (555) 234-8901">
+                </div>
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Campus Base</label>
+                  <input type="text" class="form-control-luxury" value="Geneva Main Campus (Lakeside Quarters)" readonly>
+                </div>
+                <div class="col-md-6 form-group-luxury">
+                  <label class="form-label-luxury">Emergency Contact</label>
+                  <input type="text" class="form-control-luxury" value="Eleanor Sterling (Mother) • +1 (555) 019-3321">
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="submit" class="btn-luxury btn-luxury-primary">Save Profile Updates</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- TAB 3: COURSEWORK & MODULES -->
+        <section id="tab-coursework" class="tab-pane-custom">
+          <div class="dash-card">
+            <h4 class="font-serif mb-3">Enrolled Academic Modules (Autumn 2026)</h4>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="p-4 border rounded bg-surface-elevated h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge badge-luxury badge-champagne">6 ECTS Credits</span>
+                    <span class="small text-muted font-monospace">HMI-HM301</span>
+                  </div>
+                  <h5 class="fw-bold font-serif mb-2">Hotel Asset Revenue & Yield Management</h5>
+                  <p class="small text-muted mb-3">Forecasting algorithms, RevPAR analytics, distribution channel cost modeling, and real estate leasing contracts.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-luxury-outline" onclick="window.HMI.showToast('Downloading Module Syllabus PDF...');">Download Syllabus</button>
+                    <button class="btn btn-sm btn-luxury-primary" onclick="window.HMI.showToast('Accessing Lecture Slides Archive...');">Lecture Slides</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-4 border rounded bg-surface-elevated h-100">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge badge-luxury badge-burgundy">6 ECTS Credits</span>
+                    <span class="small text-muted font-monospace">HMI-CUL204</span>
+                  </div>
+                  <h5 class="fw-bold font-serif mb-2">Haute Cuisine Master Practical & Sauces</h5>
+                  <p class="small text-muted mb-3">Advanced Escoffier mother sauces, precision ballotine preparation, sous-vide immersion, and jury plate presentation.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-luxury-outline" onclick="window.HMI.showToast('Downloading Recipe Technical Dossier...');">Technical Dossier</button>
+                    <button class="btn btn-sm btn-luxury-primary" onclick="window.HMI.showToast('Opening Kitchen Roster...');">Kitchen Schedule</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: ASSIGNMENT TRACKING -->
+        <section id="tab-assignments" class="tab-pane-custom">
+          <div class="dash-card mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <h4 class="font-serif mb-1">Academic Assignment Tracker</h4>
+                <p class="small text-muted mb-0">Upload digital submissions, track mentor feedback, and review Turnitin similarity reports.</p>
+              </div>
+            </div>
+
+            <div id="assignmentSuccessAlert" class="alert alert-success d-none py-2 mb-3">
+              <i data-lucide="check-circle" class="inline me-2"></i> Assignment submitted successfully! Authenticity verified by Turnitin.
+            </div>
+
+            <div class="table-responsive">
+              <table class="table-luxury">
+                <thead>
+                  <tr>
+                    <th>Title & Module</th>
+                    <th>Due Date</th>
+                    <th>Weightage</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="fw-bold">Luxury Hotel Feasibility Study</div>
+                      <div class="small text-muted">HMI-HM301 • Prof. Thornton</div>
+                    </td>
+                    <td class="text-danger fw-semibold">Nov 18, 2026 (Tomorrow)</td>
+                    <td>25% of Final Grade</td>
+                    <td><span class="badge bg-warning-subtle text-warning-emphasis border">Pending Submission</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-luxury-primary" data-bs-toggle="modal" data-bs-target="#submitAssignmentModal">Submit Work</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="fw-bold">French Classical Pastry Technical Dossier</div>
+                      <div class="small text-muted">HMI-CUL204 • Chef Vachon</div>
+                    </td>
+                    <td>Nov 02, 2026</td>
+                    <td>20% of Final Grade</td>
+                    <td><span class="badge bg-success-subtle text-success border">Graded: 94/100 (A+)</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="window.HMI.showToast('Opening Mentor Feedback Report: Outstanding technique and plate symmetry.');">View Feedback</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 5: LEARNING PROGRESS -->
+        <section id="tab-progress" class="tab-pane-custom">
+          <div class="dash-card">
+            <h4 class="font-serif mb-3">Competency & Skill Mastery Radar</h4>
+            <p class="small text-muted mb-4">Practical proficiency evaluations conducted by visiting external examiners and hotel General Managers.</p>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">Opera Cloud PMS System Navigation</span>
+                    <span class="small text-champagne fw-bold">96% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 96%;"></div></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">French Culinary Knife Discipline & Safety</span>
+                    <span class="small text-champagne fw-bold">92% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 92%;"></div></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">Wine Chemistry & Blind Tasting Precision</span>
+                    <span class="small text-champagne fw-bold">88% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 88%;"></div></div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">VIP Concierge & Butler Etiquette Protocols</span>
+                    <span class="small text-champagne fw-bold">98% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 98%;"></div></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">Hotel Asset Yield Algorithms</span>
+                    <span class="small text-champagne fw-bold">84% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 84%;"></div></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold small">Banqueting & Gala Logistics Management</span>
+                    <span class="small text-champagne fw-bold">90% Mastery</span>
+                  </div>
+                  <div class="progress-luxury"><div class="progress-bar-luxury" style="width: 90%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: INTERNSHIP TRACKING -->
+        <section id="tab-internship" class="tab-pane-custom">
+          <div class="dash-card">
+            <h4 class="font-serif mb-2">International 5-Star Residency Portal</h4>
+            <p class="small text-muted mb-4">Official monitoring of your 6-month operational placement and employer evaluation reports.</p>
+
+            <div class="row g-4 align-items-center mb-4">
+              <div class="col-md-7">
+                <div class="p-4 border rounded bg-surface-elevated">
+                  <span class="badge bg-success-subtle text-success border mb-2">Contract Confirmed & Visa Approved</span>
+                  <h4 class="font-serif mb-1">The Ritz-Carlton Hotel de la Paix, Geneva</h4>
+                  <p class="text-muted small mb-3">Position: Management Trainee (Rooms Division & Executive Club)</p>
+                  <div class="row g-2 small">
+                    <div class="col-6"><strong>Residency Period:</strong> Feb 01 – Jul 31, 2027</div>
+                    <div class="col-6"><strong>Monthly Stipend:</strong> 2,800 CHF / Month</div>
+                    <div class="col-6"><strong>Appointed Mentor:</strong> Laurent Vasseur, Resident GM</div>
+                    <div class="col-6"><strong>Housing:</strong> Provided via Hotel Quarter</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <div class="p-3 border rounded text-center">
+                  <div class="stat-icon-wrapper emerald mx-auto mb-2"><i data-lucide="check-circle-2"></i></div>
+                  <h6 class="fw-bold mb-1">Pre-Placement Clearance</h6>
+                  <p class="small text-muted mb-3">All health certificates, background vetting, and uniform fittings completed.</p>
+                  <button class="btn btn-sm btn-luxury-primary w-100" onclick="window.HMI.showToast('Downloading Official Placement Agreement PDF...');">Download Placement Dossier</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 7: FEE STATUS & RECEIPTS -->
+        <section id="tab-fees" class="tab-pane-custom">
+          <div class="dash-card mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h4 class="font-serif mb-1">Financial Account Ledger</h4>
+                <p class="small text-muted mb-0">Review tuition invoices, paid instalments, and download tax receipts.</p>
+              </div>
+              <a href="pay-fees.html" class="btn-luxury btn-luxury-primary py-2 px-3 small">
+                <i data-lucide="credit-card" style="width:14px;height:14px;"></i> Pay Remaining Balance
+              </a>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-md-4">
+                <div class="p-3 border rounded">
+                  <div class="small text-muted">Total Annual Fee</div>
+                  <div class="fs-4 fw-bold font-serif student-display-fee-total">$18,500</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 border rounded">
+                  <div class="small text-muted">Total Settled</div>
+                  <div class="fs-4 fw-bold font-serif text-success student-display-fee-paid">$12,500</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 border rounded bg-warning-subtle">
+                  <div class="small text-warning-emphasis">Current Balance Due</div>
+                  <div class="fs-4 fw-bold font-serif text-danger student-display-fee-balance">$6,000</div>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="font-serif mb-2">Verified Payment Transactions</h5>
+            <div class="table-responsive">
+              <table class="table-luxury">
+                <thead>
+                  <tr>
+                    <th>Transaction Reference</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Settled</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody id="dashPaymentHistoryBody">
+                  <!-- Populated by js/dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 8: EXAMS & RESULTS -->
+        <section id="tab-exams" class="tab-pane-custom">
+          <div class="dash-card">
+            <h4 class="font-serif mb-3">Semester Examination Schedule & Transcripts</h4>
+            <div class="table-responsive mb-4">
+              <table class="table-luxury">
+                <thead>
+                  <tr>
+                    <th>Module</th>
+                    <th>Date & Time</th>
+                    <th>Hall / Lab</th>
+                    <th>Hall Ticket</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold">Hotel Real Estate & Yield Strategy</td>
+                    <td>Dec 08, 2026 • 09:30</td>
+                    <td>Amphitheatre Alpha</td>
+                    <td><button class="btn btn-sm btn-outline-secondary py-1" onclick="window.HMI.showToast('Downloading Admit Card...');">Download Pass</button></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">Haute Cuisine Practical Jury</td>
+                    <td>Dec 10, 2026 • 08:00</td>
+                    <td>Kitchen Lab 2</td>
+                    <td><button class="btn btn-sm btn-outline-secondary py-1" onclick="window.HMI.showToast('Downloading Admit Card...');">Download Pass</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h5 class="font-serif mb-3">Past Semester Results (Term III)</h5>
+            <div class="p-3 border rounded bg-surface-elevated d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-bold">Semester III Consolidated Grade Card</div>
+                <div class="small text-muted">Term GPA: 3.94 • 30 ECTS Cleared</div>
+              </div>
+              <button class="btn btn-sm btn-luxury-primary" onclick="window.HMI.showToast('Official Swiss ECTS Transcript Downloaded.');">Download Official Transcript</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 9: NOTIFICATIONS -->
+        <section id="tab-notifications" class="tab-pane-custom">
+          <div class="dash-card">
+            <h4 class="font-serif mb-3">Student Notification Center</h4>
+            <div class="d-flex flex-column gap-3">
+              <div class="p-3 border rounded bg-surface d-flex align-items-start gap-3">
+                <div class="stat-icon-wrapper gold flex-shrink-0"><i data-lucide="mail"></i></div>
+                <div>
+                  <div class="fw-bold">Residency Contract Counter-Signed by The Ritz-Carlton</div>
+                  <div class="small text-muted mb-1">Human Resources Geneva has endorsed your 6-month placement papers.</div>
+                  <div class="small text-muted" style="font-size:0.75rem;">Today, 10:14 CET</div>
+                </div>
+              </div>
+
+              <div class="p-3 border rounded bg-surface d-flex align-items-start gap-3">
+                <div class="stat-icon-wrapper burgundy flex-shrink-0"><i data-lucide="alert-triangle"></i></div>
+                <div>
+                  <div class="fw-bold">Spring Semester Fee Schedule Advisory</div>
+                  <div class="small text-muted mb-1">Early settlement discount of 5% applies to balances cleared prior to Dec 15.</div>
+                  <div class="small text-muted" style="font-size:0.75rem;">Nov 15, 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 10: SETTINGS -->
+        <section id="tab-settings" class="tab-pane-custom">
+          <div class="dash-card max-w-700">
+            <h4 class="font-serif mb-3">Portal Preferences & Security</h4>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded">
+                <div>
+                  <div class="fw-bold">Interface Theme (Light / Dark)</div>
+                  <div class="small text-muted">Toggle your visual workspace preference.</div>
+                </div>
+                <button class="icon-btn theme-toggle-btn"><i data-lucide="moon"></i></button>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded">
+                <div>
+                  <div class="fw-bold">Layout Direction (LTR / RTL)</div>
+                  <div class="small text-muted">Full right-to-left layout adaptation.</div>
+                </div>
+                <button class="icon-btn rtl-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg></button>
+              </div>
+
+              <div class="p-3 border rounded">
+                <div class="fw-bold mb-2">Two-Factor Security Authentication</div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="twoFactorSwitch" checked>
+                  <label class="form-check-label small text-muted" for="twoFactorSwitch">Require SMS / Authenticator app confirmation on new devices.</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- SUBMIT ASSIGNMENT MODAL -->
+  <div class="modal fade" id="submitAssignmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content auth-card border-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title font-serif">Upload Assignment Document</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted mb-3">Luxury Hotel Feasibility Study (HMI-HM301). Accepted formats: PDF, DOCX (Max 25MB).</p>
+          <div class="mb-3">
+            <input type="file" id="assignmentFileInput" class="form-control form-control-luxury" accept=".pdf,.doc,.docx">
+          </div>
+          <button type="button" id="btnSubmitAssignmentDemo" class="btn-luxury btn-luxury-primary w-100" data-bs-dismiss="modal">
+            Confirm & Upload to Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
+
+
+

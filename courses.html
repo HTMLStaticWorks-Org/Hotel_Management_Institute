@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Suite -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <title>Courses & Academic Disciplines | HMI Geneva & London 2026</title>
+  <meta name="description" content="Explore our seven specialized degree and diploma programs in Hotel Management, Culinary Arts, F&B Service, Front Office, Housekeeping, and Event Management.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-crest">H</div>
+        <div class="brand-text">
+          <span class="brand-name">HMI Geneva</span>
+          <span class="brand-sub">Hotel Management Institute</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link-custom">Home <i data-lucide="chevron-down" style="width:14px;height:14px;"></i></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="index.html" class="dropdown-item-custom"><span class="item-number">01</span> Home 1 (Cinematic) <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="home-2.html" class="dropdown-item-custom"><span class="item-number">02</span> Home 2 (Editorial) <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link-custom">About</a></li>
+          <li class="nav-item"><a href="courses.html" class="nav-link-custom active">Courses</a></li>
+          <li class="nav-item"><a href="placements.html" class="nav-link-custom">Placements</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link-custom">Services <i data-lucide="chevron-down" style="width:14px;height:14px;"></i></a>
+            <ul class="dropdown-menu-custom" style="min-width: 290px;">
+              <li><a href="courses.html" class="dropdown-item-custom"><span class="item-number">01</span> Courses <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="placements.html" class="dropdown-item-custom"><span class="item-number">02</span> Placements <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="administration.html" class="dropdown-item-custom"><span class="item-number">03</span> Administration <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="academic-administration.html" class="dropdown-item-custom"><span class="item-number">04</span> Academic Administration <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="anti-ragging.html" class="dropdown-item-custom"><span class="item-number">05</span> Anti-Ragging <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="examination.html" class="dropdown-item-custom"><span class="item-number">06</span> Examination <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="facilities.html" class="dropdown-item-custom"><span class="item-number">07</span> Facilities <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="pay-fees.html" class="nav-link-custom">Pay Fees</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Utility Controls -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+        </button>
+        <a href="login.html" class="icon-btn" title="Student Login" aria-label="Login">
+          <i data-lucide="log-in"></i>
+        </a>
+        <a href="register.html" class="icon-btn" title="Student Registration" aria-label="Sign In">
+          <i data-lucide="user-plus"></i>
+        </a>
+        <a href="dashboard.html" class="icon-btn" title="Student Portal Dashboard" aria-label="Dashboard">
+          <i data-lucide="layout-dashboard"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Open Mobile Menu">
+        <i data-lucide="menu" style="width:26px;height:26px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- OFFCANVAS MOBILE DRAWER -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-crest">H</div>
+        <div class="brand-text">
+          <span class="brand-name">HMI Geneva</span>
+          <span class="brand-sub">Institute Portal</span>
+        </div>
+      </div>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-dropdown">
+        <a href="#" class="drawer-nav-link drawer-dropdown-btn">
+          <span>Home</span>
+          <i data-lucide="chevron-down" style="width:16px;height:16px;"></i>
+        </a>
+        <div class="drawer-dropdown-content">
+          <a href="index.html" class="drawer-dropdown-link"><span class="text-champagne">01</span> Home 1 (Cinematic)</a>
+          <a href="home-2.html" class="drawer-dropdown-link"><span class="text-champagne">02</span> Home 2 (Editorial)</a>
+        </div>
+      </li>
+      <li><a href="about.html" class="drawer-nav-link">About Us</a></li>
+      <li><a href="courses.html" class="drawer-nav-link">Courses</a></li>
+      <li><a href="placements.html" class="drawer-nav-link">Placements</a></li>
+      <li class="drawer-dropdown">
+        <a href="#" class="drawer-nav-link drawer-dropdown-btn">
+          <span>Services</span>
+          <i data-lucide="chevron-down" style="width:16px;height:16px;"></i>
+        </a>
+        <div class="drawer-dropdown-content">
+          <a href="courses.html" class="drawer-dropdown-link"><span class="text-champagne">01</span> Courses</a>
+          <a href="placements.html" class="drawer-dropdown-link"><span class="text-champagne">02</span> Placements</a>
+          <a href="administration.html" class="drawer-dropdown-link"><span class="text-champagne">03</span> Administration</a>
+          <a href="academic-administration.html" class="drawer-dropdown-link"><span class="text-champagne">04</span> Academic Administration</a>
+          <a href="anti-ragging.html" class="drawer-dropdown-link"><span class="text-champagne">05</span> Anti-Ragging</a>
+          <a href="examination.html" class="drawer-dropdown-link"><span class="text-champagne">06</span> Examination</a>
+          <a href="facilities.html" class="drawer-dropdown-link"><span class="text-champagne">07</span> Facilities</a>
+        </div>
+      </li>
+      <li><a href="pay-fees.html" class="drawer-nav-link">Pay Fees Online</a></li>
+      <li><a href="contact.html" class="drawer-nav-link">Contact Institute</a></li>
+    </ul>
+
+    <div class="drawer-actions-grid">
+      <button class="icon-btn theme-toggle-btn" title="Theme"><i data-lucide="moon"></i></button>
+      <button class="icon-btn rtl-toggle-btn" title="RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg></button>
+      <a href="login.html" class="icon-btn" title="Login"><i data-lucide="log-in"></i></a>
+      <a href="register.html" class="icon-btn" title="Sign In"><i data-lucide="user-plus"></i></a>
+      <a href="dashboard.html" class="icon-btn" title="Dashboard"><i data-lucide="layout-dashboard"></i></a>
+    </div>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li>/</li>
+        <li class="active">Courses</li>
+      </ul>
+      <h1 class="heading-display mb-3">Academic Programs & Specializations</h1>
+      <p class="lead max-w-700 text-muted">
+        Seven world-class curricula engineered with Swiss precision and British academic rigor, preparing students for executive roles across international hospitality.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES LISTING -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-column gap-5">
+
+        <!-- 1. HOTEL MANAGEMENT -->
+        <div class="editorial-card p-4 p-lg-5" id="hotel-management" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Hotel Management">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Undergraduate Degree</span>
+                <span class="badge badge-luxury badge-burgundy">Dual Swiss-UK Award</span>
+              </div>
+              <h2 class="heading-section mb-3">1. B.Sc. International Hotel Management</h2>
+              <p class="text-muted mb-4 lead">
+                A premier 3-year honours degree training global hoteliers in financial modeling, yield strategy, executive guest relations, human capital leadership, and asset lifecycle management.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">3 Years (6 Semesters + 6-Mo Residency)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Diploma (IB/A-Levels), IELTS 6.0</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Opera Cloud PMS, Hotel Finance, Luxury Hospitality Marketing, Housekeeping Systems, Sustainable Resort Planning.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Resident Manager, Operations Director, Front Office Head, Revenue Strategist.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=hotel-management" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. HOSPITALITY MANAGEMENT -->
+        <div class="editorial-card p-4 p-lg-5" id="hospitality-management" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5 order-lg-2">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hospitality Management">
+              </div>
+            </div>
+            <div class="col-lg-7 order-lg-1">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Postgraduate Master</span>
+                <span class="badge badge-luxury badge-burgundy">Executive Track</span>
+              </div>
+              <h2 class="heading-section mb-3">2. Master in International Hospitality Leadership</h2>
+              <p class="text-muted mb-4 lead">
+                Designed for high-potential professionals and graduates aspiring to command luxury brand portfolios, private member clubs, and luxury real estate hospitality assets.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">18 Months (Includes Global Consulting Project)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">Bachelor's Degree in any discipline + Interview</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Hospitality Asset Valuation, Cross-Cultural Luxury Psychology, Corporate Finance, Digital Guest Transformation, Crisis Governance.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Vice President of Hospitality, General Manager, Luxury Brand Ambassador, Asset Portfolio Manager.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=hospitality-leadership" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. CULINARY ARTS -->
+        <div class="editorial-card p-4 p-lg-5" id="culinary-arts" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Culinary Arts">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Grand Diploma</span>
+                <span class="badge badge-luxury badge-burgundy">Michelin Mentorship</span>
+              </div>
+              <h2 class="heading-section mb-3">3. Grand Diploma in Haute Cuisine & Patisserie</h2>
+              <p class="text-muted mb-4 lead">
+                Comprehensive training in classical French culinary disciplines, modern sous-vide sciences, artisanal bakery, molecular textures, and tasting menu design.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">2 Years (4 Semesters Intensive Lab Work)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Certificate & Culinary Aptitude Assessment</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Sauces & Stocks, Butchery, Sugar Sculpture, Chocolate Tempering, Kitchen Cost Control, Michelin Kitchen Sanitation.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Executive Chef, Head Pastry Chef, Culinary Consultant, Private Superyacht Chef.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=culinary-arts" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. FOOD & BEVERAGE SERVICE -->
+        <div class="editorial-card p-4 p-lg-5" id="fnb-service" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5 order-lg-2">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="F&B Service">
+              </div>
+            </div>
+            <div class="col-lg-7 order-lg-1">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Professional Diploma</span>
+                <span class="badge badge-luxury badge-burgundy">Court of Master Sommeliers</span>
+              </div>
+              <h2 class="heading-section mb-3">4. Diploma in Food & Beverage Service & Sommelier Sciences</h2>
+              <p class="text-muted mb-4 lead">
+                Mastering the balance of high-touch service, fine dining restaurant management, cellar acquisition, terroir chemistry, and modern mixology.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">1 Year (12 Months + WSET Levels 1-3)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Diploma (Min 18 years of age)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Table Service Etiquette, Wine Chemistry, Spirits Distillation, Banqueting Profitability, Bar Design & POS Integration.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">F&B Director, Head Sommelier, Mixology Consultant, Fine Dining Maître d'Hôtel.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=fnb-service" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. FRONT OFFICE MANAGEMENT -->
+        <div class="editorial-card p-4 p-lg-5" id="front-office" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80" alt="Front Office">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Certificate & Diploma</span>
+                <span class="badge badge-luxury badge-burgundy">Les Clefs d'Or Protocols</span>
+              </div>
+              <h2 class="heading-section mb-3">5. Front Office Management & VIP Concierge Services</h2>
+              <p class="text-muted mb-4 lead">
+                Commanding the face of luxury hotels: guest profiling, high-stakes dispute resolution, VIP escort protocols, and automated cloud reservation systems.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">1 Year (2 Semesters)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Diploma + Fluent English & Second Language</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Opera PMS Certification, Butler Grooming, Telecommunications Protocol, Luxury Transportation Coordination, Room Assignment Logic.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Front Office Manager, Chief Concierge, Guest Relations Director, Night Auditor.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=front-office" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. HOUSEKEEPING OPERATIONS -->
+        <div class="editorial-card p-4 p-lg-5" id="housekeeping" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5 order-lg-2">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Housekeeping Operations">
+              </div>
+            </div>
+            <div class="col-lg-7 order-lg-1">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Advanced Certificate</span>
+                <span class="badge badge-luxury badge-burgundy">Interior Sciences</span>
+              </div>
+              <h2 class="heading-section mb-3">6. Executive Housekeeping & Facilities Hygiene</h2>
+              <p class="text-muted mb-4 lead">
+                The backbone of hotel asset preservation: textile care, floral architecture, chemical safety, room inspection analytics, and eco-sustainable housekeeping operations.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">1 Year (Includes Lab Practicum)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Certificate or Equivalent</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Linen & Laundry Technology, Fine Material Care (Marble/Silk/Leather), Pest Management, Room Turnaround Time Optimization, Green Cleaning.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Executive Housekeeper, Director of Services, Facilities Inspector, Estate Manager.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=housekeeping" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. EVENT MANAGEMENT -->
+        <div class="editorial-card p-4 p-lg-5" id="event-management" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="editorial-card-img-wrap rounded shadow" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Event Management">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge badge-luxury badge-champagne">Professional Diploma</span>
+                <span class="badge badge-luxury badge-burgundy">Global Summit Staging</span>
+              </div>
+              <h2 class="heading-section mb-3">7. Luxury Event, Convention & Wedding Management</h2>
+              <p class="text-muted mb-4 lead">
+                Orchestrating state banquets, high-fashion galas, multi-million-dollar destination weddings, and international business conventions with creative vision and logistical precision.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Duration</div>
+                  <div class="fw-semibold">2 Years (4 Semesters)</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Eligibility</div>
+                  <div class="fw-semibold">High School Diploma + Creative Portfolio Review</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Core Curriculum</div>
+                  <div class="small text-muted">Banqueting Logistics, Stage & Light Production, Celebrity Protocol, Contract Negotiations, Risk Assessment & Crowd Safety.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="small fw-bold text-muted text-uppercase">Career Opportunities</div>
+                  <div class="small text-muted">Director of Events, Luxury Wedding Planner, Conference Producer, Festival Operations Manager.</div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html?course=event-management" class="btn-luxury btn-luxury-primary">Apply for Program</a>
+                <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Structure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-surface-elevated text-center">
+    <div class="container max-w-700" data-aos="zoom-in">
+      <span class="eyebrow">Personalized Academic Guidance</span>
+      <h2 class="heading-section mb-3">Need Help Selecting Your Discipline?</h2>
+      <p class="text-muted mb-4 lead">Speak with an admissions mentor to assess your interests, career aspirations, and scholarship eligibility.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="contact.html" class="btn-luxury btn-luxury-primary">Schedule Counselling</a>
+        <a href="pay-fees.html" class="btn-luxury btn-luxury-outline">View Fee Estimator</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <div class="brand-crest">H</div>
+            <div class="brand-text">
+              <span class="brand-name text-white">HMI Geneva</span>
+              <span class="brand-sub">Institute of Hotel Management</span>
+            </div>
+          </a>
+          <p class="text-muted small pe-lg-4 mb-4">
+            Curating the highest standards of international hospitality, estate management, and culinary sciences since 1984.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="YouTube" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><polygon points="10 15 15 12 10 9 10 15"></polygon></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X / Twitter" title="X / Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Academic</h5>
+          <ul class="footer-links">
+            <li><a href="courses.html#hotel-management" class="footer-link">Hotel Management</a></li>
+            <li><a href="courses.html#culinary-arts" class="footer-link">Culinary Arts</a></li>
+            <li><a href="courses.html#fnb-service" class="footer-link">F&B Operations</a></li>
+            <li><a href="courses.html#front-office" class="footer-link">Front Office</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Institute</h5>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About HMI</a></li>
+            <li><a href="placements.html" class="footer-link">Placements</a></li>
+            <li><a href="facilities.html" class="footer-link">Facilities</a></li>
+            <li><a href="administration.html" class="footer-link">Administration</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Portals</h5>
+          <ul class="footer-links">
+            <li><a href="dashboard.html" class="footer-link">Student Portal</a></li>
+            <li><a href="pay-fees.html" class="footer-link">Pay Fees Online</a></li>
+            <li><a href="examination.html" class="footer-link">Examination</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Admissions</h5>
+          <p class="small text-muted mb-2">
+            Admissions Office:<br>
+            admissions@hmi.edu.ch<br>
+            +44 20 7946 0912
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="row align-items-center justify-content-between g-3">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">© 2026 Hotel Management Institute (HMI). All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-inline-flex gap-3">
+            <a href="#" class="text-muted small">Privacy</a>
+            <span class="text-muted">•</span>
+            <a href="#" class="text-muted small">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
+
+
+

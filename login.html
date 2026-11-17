@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Suite -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <title>Student Portal Login | HMI 2026</title>
+  <meta name="description" content="Secure student authentication gateway for HMI Institute of Hotel Management. Access coursework, exams, fees, and internship records.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Master Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Utility Controls for Auth Page -->
+  <div style="position: absolute; top: 24px; right: 24px; z-index: 100; display: flex; gap: 10px;">
+    <button class="icon-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+      <i data-lucide="moon"></i>
+    </button>
+    <button class="icon-btn rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+    </button>
+  </div>
+
+  <div class="auth-wrapper">
+    <!-- Visual Left Split (Screen >= 992px) -->
+    <div class="auth-split-visual" style="background-image: url('image/home 1 hero.jpg');">
+      <div class="auth-visual-content">
+        <span class="eyebrow" style="color:#E2B788;">Swiss & British Hospitality Excellence</span>
+        <h2 class="font-serif display-5 mb-3">Your Portal to Global Leadership</h2>
+        <p class="lead text-white-50 mb-0" style="max-width: 500px;">
+          Access your personalized academic records, Opera PMS simulations, Michelin culinary grades, and 5-star residency offers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Form Right Split -->
+    <div class="auth-split-form">
+      <div class="auth-card">
+        <!-- Logo Clickable to Return Home -->
+        <a href="index.html" class="brand-logo mb-4" title="Return to Public Home">
+          <div class="brand-crest">H</div>
+          <div class="brand-text">
+            <span class="brand-name">HMI Geneva</span>
+            <span class="brand-sub">Institute Portal</span>
+          </div>
+        </a>
+
+        <h3 class="font-serif mb-2">Student Portal Login</h3>
+        <p class="small text-muted mb-4">Please enter your verified credentials to enter your student suite.</p>
+
+        <!-- Demo credentials hint -->
+        <div class="p-3 mb-4 rounded bg-surface-elevated border small">
+          <div class="d-flex align-items-center gap-2 fw-bold text-champagne mb-1">
+            <i data-lucide="info" style="width:16px;height:16px;"></i>
+            <span>Demo Access Credentials:</span>
+          </div>
+          <div>Student ID: <code class="fw-bold">HMI2026</code> &nbsp;|&nbsp; Password: <code class="fw-bold">password123</code></div>
+        </div>
+
+        <div id="loginError" class="alert alert-danger py-2 small d-none"></div>
+
+        <form id="loginForm">
+          <div class="form-group-luxury">
+            <label class="form-label-luxury">Student ID or Institutional Email *</label>
+            <input type="text" id="loginId" class="form-control-luxury" placeholder="e.g. HMI2026 or email" value="HMI2026" required>
+          </div>
+
+          <div class="form-group-luxury position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label-luxury mb-0">Password *</label>
+              <a href="#" class="small text-champagne" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
+            </div>
+            <div class="input-group">
+              <input type="password" id="loginPassword" class="form-control form-control-luxury" placeholder="Enter password" value="password123" required>
+              <button class="btn btn-outline-secondary password-toggle-btn border" type="button" data-target="loginPassword" aria-label="Toggle password visibility">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+              <label class="form-check-label small text-muted" for="rememberMe">
+                Remember this device
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-luxury btn-luxury-primary w-100 py-3 mb-3">
+            <i data-lucide="log-in" class="me-2" style="width:18px;height:18px;"></i>
+            <span>Access Student Dashboard</span>
+          </button>
+
+          <div class="text-center small text-muted">
+            New to HMI? <a href="register.html" class="fw-bold text-champagne">Create an Account / Register</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="index.html" class="small text-muted d-inline-flex align-items-center gap-1">
+          <i data-lucide="arrow-left" style="width:14px;height:14px;"></i> Return to Public Homepage
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORGOT PASSWORD MODAL -->
+  <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 auth-card">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title font-serif">Credential Recovery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted mb-3">Enter your registered Student ID or institutional email to receive a password reset token.</p>
+          <form onsubmit="event.preventDefault(); window.HMI.showToast('Reset link dispatched to registered email.'); bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal')).hide();">
+            <div class="form-group-luxury">
+              <label class="form-label-luxury">Student ID / Email</label>
+              <input type="text" class="form-control-luxury" placeholder="e.g. HMI2026" required>
+            </div>
+            <button type="submit" class="btn-luxury btn-luxury-primary w-100">Dispatch Recovery Token</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Suite -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <title>The Art of Hospitality & Career Excellence | HMI Home 2</title>
+  <meta name="description" content="HMI London & Geneva - The Art of Hospitality & Career Excellence. Editorial Education, Timeline Pathways & Practical Mastery.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-crest">H</div>
+        <div class="brand-text">
+          <span class="brand-name">HMI London</span>
+          <span class="brand-sub">School of Hospitality</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link-custom active">Home <i data-lucide="chevron-down" style="width:14px;height:14px;"></i></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="index.html" class="dropdown-item-custom"><span class="item-number">01</span> Home 1 (Cinematic) <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="home-2.html" class="dropdown-item-custom"><span class="item-number">02</span> Home 2 (Editorial) <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link-custom">About</a></li>
+          <li class="nav-item"><a href="courses.html" class="nav-link-custom">Courses</a></li>
+          <li class="nav-item"><a href="placements.html" class="nav-link-custom">Placements</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link-custom">Services <i data-lucide="chevron-down" style="width:14px;height:14px;"></i></a>
+            <ul class="dropdown-menu-custom" style="min-width: 290px;">
+              <li><a href="courses.html" class="dropdown-item-custom"><span class="item-number">01</span> Courses <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="placements.html" class="dropdown-item-custom"><span class="item-number">02</span> Placements <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="administration.html" class="dropdown-item-custom"><span class="item-number">03</span> Administration <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="academic-administration.html" class="dropdown-item-custom"><span class="item-number">04</span> Academic Administration <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="anti-ragging.html" class="dropdown-item-custom"><span class="item-number">05</span> Anti-Ragging <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="examination.html" class="dropdown-item-custom"><span class="item-number">06</span> Examination <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+              <li><a href="facilities.html" class="dropdown-item-custom"><span class="item-number">07</span> Facilities <i data-lucide="arrow-up-right" class="arrow-icon"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="pay-fees.html" class="nav-link-custom">Pay Fees</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Utility Controls -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle-btn" title="Toggle RTL / LTR Direction" aria-label="Toggle RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+        </button>
+        <a href="login.html" class="icon-btn" title="Student Login" aria-label="Login">
+          <i data-lucide="log-in"></i>
+        </a>
+        <a href="register.html" class="icon-btn" title="Student Registration" aria-label="Sign In">
+          <i data-lucide="user-plus"></i>
+        </a>
+        <a href="dashboard.html" class="icon-btn" title="Student Portal Dashboard" aria-label="Dashboard">
+          <i data-lucide="layout-dashboard"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Open Mobile Menu">
+        <i data-lucide="menu" style="width:26px;height:26px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- OFFCANVAS MOBILE DRAWER -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-crest">H</div>
+        <div class="brand-text">
+          <span class="brand-name">HMI London</span>
+          <span class="brand-sub">Institute Portal</span>
+        </div>
+      </div>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li class="drawer-dropdown">
+        <a href="#" class="drawer-nav-link drawer-dropdown-btn">
+          <span>Home</span>
+          <i data-lucide="chevron-down" style="width:16px;height:16px;"></i>
+        </a>
+        <div class="drawer-dropdown-content">
+          <a href="index.html" class="drawer-dropdown-link"><span class="text-champagne">01</span> Home 1 (Cinematic)</a>
+          <a href="home-2.html" class="drawer-dropdown-link"><span class="text-champagne">02</span> Home 2 (Editorial)</a>
+        </div>
+      </li>
+      <li><a href="about.html" class="drawer-nav-link">About Us</a></li>
+      <li><a href="courses.html" class="drawer-nav-link">Courses</a></li>
+      <li><a href="placements.html" class="drawer-nav-link">Placements</a></li>
+      <li class="drawer-dropdown">
+        <a href="#" class="drawer-nav-link drawer-dropdown-btn">
+          <span>Services</span>
+          <i data-lucide="chevron-down" style="width:16px;height:16px;"></i>
+        </a>
+        <div class="drawer-dropdown-content">
+          <a href="courses.html" class="drawer-dropdown-link"><span class="text-champagne">01</span> Courses</a>
+          <a href="placements.html" class="drawer-dropdown-link"><span class="text-champagne">02</span> Placements</a>
+          <a href="administration.html" class="drawer-dropdown-link"><span class="text-champagne">03</span> Administration</a>
+          <a href="academic-administration.html" class="drawer-dropdown-link"><span class="text-champagne">04</span> Academic Administration</a>
+          <a href="anti-ragging.html" class="drawer-dropdown-link"><span class="text-champagne">05</span> Anti-Ragging</a>
+          <a href="examination.html" class="drawer-dropdown-link"><span class="text-champagne">06</span> Examination</a>
+          <a href="facilities.html" class="drawer-dropdown-link"><span class="text-champagne">07</span> Facilities</a>
+        </div>
+      </li>
+      <li><a href="pay-fees.html" class="drawer-nav-link">Pay Fees Online</a></li>
+      <li><a href="contact.html" class="drawer-nav-link">Contact Institute</a></li>
+    </ul>
+
+    <div class="drawer-actions-grid">
+      <button class="icon-btn theme-toggle-btn" title="Theme"><i data-lucide="moon"></i></button>
+      <button class="icon-btn rtl-toggle-btn" title="RTL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="rtl-swap-icon"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg></button>
+      <a href="login.html" class="icon-btn" title="Login"><i data-lucide="log-in"></i></a>
+      <a href="register.html" class="icon-btn" title="Sign In"><i data-lucide="user-plus"></i></a>
+      <a href="dashboard.html" class="icon-btn" title="Dashboard"><i data-lucide="layout-dashboard"></i></a>
+    </div>
+  </aside>
+
+  <!-- 1. ASYMMETRIC SPLIT-SCREEN HERO -->
+  <section class="hero-home-2">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <span class="editorial-badge">THE 2026 EDITORIAL EDITION</span>
+          <h1 class="heading-display mb-4">
+            The Craft of <br><span class="fst-italic" style="color: var(--color-champagne);">Hospitality</span> & Career Mastery.
+          </h1>
+          <p class="lead mb-4">
+            A bespoke pedagogical curriculum engineered in London and Switzerland, merging high culinary intellect, luxury front-office finesse, and multi-asset real estate management.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#discovery" class="btn-luxury btn-luxury-primary">
+              <span>Discover Curriculum</span>
+              <i data-lucide="compass" style="width:16px;height:16px;"></i>
+            </a>
+            <a href="contact.html" class="btn-luxury btn-luxury-outline">
+              <span>Book Private Campus Tour</span>
+            </a>
+          </div>
+          <div class="mt-5 pt-4 border-top d-flex gap-4">
+            <div>
+              <div class="fw-bold font-serif fs-4 text-champagne">#1 Ranked</div>
+              <div class="small text-muted">European Hospitality Index 2025/2026</div>
+            </div>
+            <div class="border-start ps-4">
+              <div class="fw-bold font-serif fs-4 text-champagne">£48,000</div>
+              <div class="small text-muted">Average Graduate Starting Package</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="asymmetric-image-cluster">
+            <img src="image/home 2 hero.jpg" alt="Editorial Hotel Architecture" class="cluster-main-img">
+            <div class="cluster-accent-stamp">
+              <span>EST.</span>
+              <span class="fs-5">1984</span>
+              <span>GENEVA</span>
+            </div>
+            <div class="cluster-floating-card">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="stat-icon-wrapper gold" style="width:36px;height:36px;"><i data-lucide="sparkles" style="width:18px;height:18px;"></i></div>
+                <div class="fw-bold font-serif">Dual Swiss-UK Honours</div>
+              </div>
+              <p class="small text-muted mb-0">Joint degree validated by the Royal Hospitality Guild & Swiss Confederation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WELCOME TO THE WORLD OF HOSPITALITY -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-up">
+          <span class="eyebrow">Institutional Philosophy</span>
+          <h2 class="heading-section mb-4">Hospitality Is Not a Service. It Is an Elevated State of Mind.</h2>
+          <p class="text-muted lead mb-4">
+            In an increasingly automated world, bespoke human warmth and discreet, flawless service command the highest premium. HMI grooms leaders who command presence, understand cultural nuance, and inspire grand teams.
+          </p>
+          <div class="p-3 border rounded bg-surface">
+            <blockquote class="fst-italic text-muted mb-2">
+              "We teach our students to anticipate needs before they are articulated, to treat precision as an aesthetic, and to navigate luxury with effortless grace."
+            </blockquote>
+            <div class="small fw-bold text-champagne">— Sir Henry Montagu, Dean of Studies</div>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="p-4 rounded border bg-surface h-100">
+                <div class="stat-icon-wrapper gold mb-3"><i data-lucide="globe"></i></div>
+                <h5 class="fw-bold mb-2">Global Campus Transfer</h5>
+                <p class="small text-muted mb-0">Study 1 year in Geneva, 1 year in London, and your final residency in Dubai or Singapore.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-4 rounded border bg-surface h-100">
+                <div class="stat-icon-wrapper burgundy mb-3"><i data-lucide="shield-check"></i></div>
+                <h5 class="fw-bold mb-2">Swiss Standards Accord</h5>
+                <p class="small text-muted mb-0">Full international accreditation ensuring your qualifications are recognized by 140+ countries.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-4 rounded border bg-surface h-100">
+                <div class="stat-icon-wrapper emerald mb-3"><i data-lucide="briefcase"></i></div>
+                <h5 class="fw-bold mb-2">Guaranteed Paid Residency</h5>
+                <p class="small text-muted mb-0">Every student completes six months of real paid operational management in luxury partner hotels.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-4 rounded border bg-surface h-100">
+                <div class="stat-icon-wrapper blue mb-3"><i data-lucide="users"></i></div>
+                <h5 class="fw-bold mb-2">Masterclass Network</h5>
+                <p class="small text-muted mb-0">Weekly masterclasses with active General Managers from Rosewood, Dorchester, and Mandarin Oriental.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE COURSE DISCOVERY -->
+  <section class="section-padding bg-surface-elevated" id="discovery">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="eyebrow">Academic Curriculum</span>
+        <h2 class="heading-section">Curated Career Disciplines</h2>
+        <p class="text-muted">Select an academic track to view specialized pathways and career outcomes.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="editorial-card text-center p-4">
+            <div class="stat-icon-wrapper gold mx-auto mb-3"><i data-lucide="hotel"></i></div>
+            <h5 class="font-serif mb-2">Hotel Management</h5>
+            <p class="small text-muted mb-4">Complete 360-degree hotel administration, housekeeping architecture, and revenue optimization.</p>
+            <a href="courses.html" class="btn-luxury btn-luxury-outline w-100">Explore Degree</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="editorial-card text-center p-4">
+            <div class="stat-icon-wrapper burgundy mx-auto mb-3"><i data-lucide="chef-hat"></i></div>
+            <h5 class="font-serif mb-2">Culinary Arts & Pastry</h5>
+            <p class="small text-muted mb-4">Classical French haute cuisine, precision knife skills, sourdough fermentation, and tasting design.</p>
+            <a href="courses.html" class="btn-luxury btn-luxury-outline w-100">Explore Diploma</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="editorial-card text-center p-4">
+            <div class="stat-icon-wrapper emerald mx-auto mb-3"><i data-lucide="glass-water"></i></div>
+            <h5 class="font-serif mb-2">F&B Service & Wine</h5>
+            <p class="small text-muted mb-4">Cellar acquisition, sommelier certifications, artisanal mixology, and high-volume dining logistics.</p>
+            <a href="courses.html" class="btn-luxury btn-luxury-outline w-100">Explore Pathway</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="editorial-card text-center p-4">
+            <div class="stat-icon-wrapper blue mx-auto mb-3"><i data-lucide="sparkle"></i></div>
+            <h5 class="font-serif mb-2">Luxury Event Direction</h5>
+            <p class="small text-muted mb-4">Staging state banquets, high-fashion galas, private mega-yacht charters, and royal summits.</p>
+            <a href="courses.html" class="btn-luxury btn-luxury-outline w-100">Explore Program</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. HOSPITALITY CAREER JOURNEY TIMELINE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="eyebrow">The 4-Year Trajectory</span>
+        <h2 class="heading-section">Your Journey From Novice to Global Hotelier</h2>
+        <p class="text-muted">How HMI structures your academic evolution through intensive hands-on immersion and leadership development.</p>
+      </div>
+
+      <div class="luxury-timeline">
+        <!-- Step 1 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="badge badge-luxury badge-champagne mb-2">Year 1 • London Campus</span>
+            <h4 class="font-serif mb-2">Classical Etiquette & Culinary Foundation</h4>
+            <p class="small text-muted mb-0">Mastering food preparation, French terminology, restaurant service etiquette, housekeeping hygiene standards, and guest psychology.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="badge badge-luxury badge-burgundy mb-2">Year 2 • Geneva Campus</span>
+            <h4 class="font-serif mb-2">Front Office Systems & Hotel Operations</h4>
+            <p class="small text-muted mb-0">PMS reservation management, room revenue algorithms, luxury concierge protocols, and financial accounting for hospitality assets.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="badge badge-luxury badge-champagne mb-2">Year 3 • Global Placement</span>
+            <h4 class="font-serif mb-2">6-Month Paid International 5-Star Residency</h4>
+            <p class="small text-muted mb-0">Direct employment with partners like The Ritz-Carlton Paris, Aman Tokyo, or Burj Al Arab Dubai with dedicated mentor guidance.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="badge badge-luxury badge-burgundy mb-2">Year 4 • Capstone & Leadership</span>
+            <h4 class="font-serif mb-2">Executive Strategy & Asset Leadership</h4>
+            <p class="small text-muted mb-0">Hotel feasibility studies, sustainable resort development, luxury brand licensing, and executive job placement recruitment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6, 7 & 8. CULINARY, HOTEL PRACTICAL & EVENT MANAGEMENT TRIPLE SHOWCASE -->
+  <section class="section-padding bg-surface-elevated">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="editorial-card h-100">
+            <div class="editorial-card-img-wrap" style="height: 240px;">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Culinary Training">
+            </div>
+            <div class="editorial-card-body">
+              <span class="badge badge-luxury badge-champagne mb-2">Culinary Arts</span>
+              <h4 class="font-serif mb-2">Master Chef Apprenticeship</h4>
+              <p class="small text-muted mb-0">From mastering consommé clarification to precision sous-vide cooking and fine sugar sculpture, develop palate authority and kitchen resilience.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="editorial-card h-100">
+            <div class="editorial-card-img-wrap" style="height: 240px;">
+              <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=700&q=80" alt="Hotel Practical">
+            </div>
+            <div class="editorial-card-body">
+              <span class="badge badge-luxury badge-burgundy mb-2">Operations</span>
+              <h4 class="font-serif mb-2">Live Suite Immersion</h4>
+              <p class="small text-muted mb-0">Manage mock royal penthouses with motorized lighting, smart room controls, turndown services, and high-stakes VIP guest scenarios.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="editorial-card h-100">
+            <div class="editorial-card-img-wrap" style="height: 240px;">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Event Management">
+            </div>
+            <div class="editorial-card-body">
+              <span class="badge badge-luxury badge-champagne mb-2">Event Staging</span>
+              <h4 class="font-serif mb-2">Gala & Banquet Orchestration</h4>
+              <p class="small text-muted mb-0">Organize real charity galas and diplomatic receptions with up to 500 seated covers, managing audio-visual, seating protocol, and menu choreography.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CAMPUS EXPERIENCE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="eyebrow">The London Mayfair Quarters</span>
+          <h2 class="heading-section mb-4">Historic Elegance Meets State-of-the-Art Hospitality Infrastructure</h2>
+          <p class="text-muted lead mb-4">
+            Located in the heart of London’s luxury hospitality district, surrounded by the world's most storied hotels like The Connaught, Claridge's, and The Dorchester.
+          </p>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-3 border rounded">
+                <div class="fw-bold fs-5 text-champagne font-serif">100%</div>
+                <div class="small text-muted">Central Mayfair Location</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 border rounded">
+                <div class="fw-bold fs-5 text-champagne font-serif">24/7</div>
+                <div class="small text-muted">Research Library Access</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=900&q=80" alt="Historic London Architecture" class="rounded shadow-lg w-100" style="height: 440px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 & 11. STUDENT STORIES & PLACEMENT SUCCESS -->
+  <section class="section-padding bg-surface-elevated">
+    <div class="container">
+      <div class="row align-items-end justify-content-between mb-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="eyebrow">Alumni Highlights</span>
+          <h2 class="heading-section">Where Talent Meets Opportunity</h2>
+          <p class="text-muted">A showcase of recent graduates stepping straight into global leadership.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end" data-aos="fade-up">
+          <a href="placements.html" class="btn-luxury btn-luxury-primary">View Placement Report</a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="editorial-card p-4">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Alumna" class="rounded-circle mb-3 shadow-sm" style="width: 72px; height: 72px; object-fit: cover;">
+            <h5 class="fw-bold font-serif mb-1">Victoria Sterling</h5>
+            <div class="small text-champagne fw-semibold mb-2">Class of 2023</div>
+            <div class="fw-semibold text-main mb-2">Assistant GM, The Connaught London</div>
+            <p class="small text-muted mb-0">"The real-world pressure simulations at HMI made transitioning to Mayfair’s top luxury property completely seamless."</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="editorial-card p-4">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Alumnus" class="rounded-circle mb-3 shadow-sm" style="width: 72px; height: 72px; object-fit: cover;">
+            <h5 class="fw-bold font-serif mb-1">Julian Thorne</h5>
+            <div class="small text-champagne fw-semibold mb-2">Class of 2022</div>
+            <div class="fw-semibold text-main mb-2">Head Sommelier, Mandarin Oriental Tokyo</div>
+            <p class="small text-muted mb-0">"The depth of wine cellar training and master sommelier certifications earned during my degree gave me an immense competitive edge."</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="editorial-card p-4">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Alumna" class="rounded-circle mb-3 shadow-sm" style="width: 72px; height: 72px; object-fit: cover;">
+            <h5 class="fw-bold font-serif mb-1">Sofia Del Castillo</h5>
+            <div class="small text-champagne fw-semibold mb-2">Class of 2024</div>
+            <div class="fw-semibold text-main mb-2">Director of VIP Services, Four Seasons Dubai</div>
+            <p class="small text-muted mb-0">"Direct recruitment on campus ensured I received three competitive offers before graduating with First Class Honours."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. ADMISSION ENQUIRY SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="auth-card max-w-900 mx-auto" data-aos="zoom-in">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="eyebrow">Exclusive Enrolment</span>
+            <h3 class="heading-section mb-3">Begin Your Application for Cohort 2026</h3>
+            <p class="small text-muted mb-4">
+              Our academic advisors are available for private consultations, campus previews, and scholarship evaluations.
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="stat-icon-wrapper gold"><i data-lucide="phone-call"></i></div>
+              <div>
+                <div class="small text-muted">Direct Admissions Line</div>
+                <div class="fw-bold">+44 (0) 20 7946 0912</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <form id="home2EnquiryForm" onsubmit="event.preventDefault(); window.HMI.showToast('Application enquiry submitted successfully!'); this.reset();">
+              <div class="mb-3">
+                <input type="text" class="form-control-luxury" placeholder="Full Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control-luxury" placeholder="Email Address" required>
+              </div>
+              <div class="mb-3">
+                <select class="form-control-luxury" required>
+                  <option value="">Preferred Intake</option>
+                  <option value="autumn-2026">Autumn Semester 2026</option>
+                  <option value="spring-2027">Spring Semester 2027</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-luxury btn-luxury-primary w-100">
+                <span>Request Prospectus & Consultation</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <div class="brand-crest">H</div>
+            <div class="brand-text">
+              <span class="brand-name text-white">HMI London</span>
+              <span class="brand-sub">School of Hospitality</span>
+            </div>
+          </a>
+          <p class="text-muted small pe-lg-4 mb-4">
+            Curating the highest standards of international hospitality, estate management, and culinary sciences.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn stroke-icon" aria-label="YouTube" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><polygon points="10 15 15 12 10 9 10 15"></polygon></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="X / Twitter" title="X / Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Academic</h5>
+          <ul class="footer-links">
+            <li><a href="courses.html" class="footer-link">Hotel Management</a></li>
+            <li><a href="courses.html" class="footer-link">Culinary Arts</a></li>
+            <li><a href="courses.html" class="footer-link">F&B Operations</a></li>
+            <li><a href="courses.html" class="footer-link">Front Office</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Institute</h5>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About HMI</a></li>
+            <li><a href="placements.html" class="footer-link">Placements</a></li>
+            <li><a href="facilities.html" class="footer-link">Facilities</a></li>
+            <li><a href="administration.html" class="footer-link">Administration</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Portals</h5>
+          <ul class="footer-links">
+            <li><a href="dashboard.html" class="footer-link">Student Portal</a></li>
+            <li><a href="pay-fees.html" class="footer-link">Pay Fees Online</a></li>
+            <li><a href="examination.html" class="footer-link">Examination</a></li>
+            <li><a href="login.html" class="footer-link">Sign In</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Admissions</h5>
+          <p class="small text-muted mb-2">
+            Admissions Office:<br>
+            admissions@hmi.edu.ch<br>
+            +44 20 7946 0912
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="row align-items-center justify-content-between g-3">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">© 2026 Hotel Management Institute (HMI). All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-inline-flex gap-3">
+            <a href="#" class="text-muted small">Privacy</a>
+            <span class="text-muted">•</span>
+            <a href="#" class="text-muted small">Terms</a>
+            <span class="text-muted">•</span>
+            <a href="#" class="text-muted small">Accreditations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
+
+
+
