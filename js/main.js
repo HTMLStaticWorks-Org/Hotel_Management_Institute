@@ -219,9 +219,42 @@
       counterElements.forEach(el => counterObserver.observe(el));
     }
 
+    // Back to Top Button Controller
+    setupBackToTop();
+
     // Lucide Icons init
     if (window.lucide) {
       window.lucide.createIcons();
     }
   });
+
+  // --- BACK TO TOP COMPONENT ---
+  function setupBackToTop() {
+    let btn = document.getElementById('backToTopBtn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'backToTopBtn';
+      btn.className = 'back-to-top';
+      btn.setAttribute('aria-label', 'Back to Top');
+      btn.setAttribute('title', 'Back to Top');
+      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`;
+      document.body.appendChild(btn);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 280) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 })();

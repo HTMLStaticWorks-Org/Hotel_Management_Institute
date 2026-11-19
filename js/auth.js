@@ -222,5 +222,33 @@
         logout();
       });
     });
+
+    // Social Login bindings
+    document.querySelectorAll('.social-auth-btn[data-provider]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const provider = btn.getAttribute('data-provider') || 'Social Account';
+        handleSocialLogin(provider);
+      });
+    });
   });
+
+  // Social login simulation (Google, LinkedIn, Apple)
+  function handleSocialLogin(provider) {
+    initDefaultStudent();
+    const students = JSON.parse(localStorage.getItem(STUDENTS_KEY) || '[]');
+    const defaultStudent = students[0];
+    if (window.HMI) {
+      window.HMI.showToast(`Connecting to ${provider}...`);
+    }
+    setTimeout(() => {
+      setSession(defaultStudent, true);
+      if (window.HMI) {
+        window.HMI.showToast(`Signed in successfully with ${provider}!`);
+      }
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 600);
+    }, 800);
+  }
 })();
